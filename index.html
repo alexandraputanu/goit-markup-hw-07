@@ -22,7 +22,7 @@
             <a href="index.html" class="logo">STUDIO</a>
             <nav class="nav-bar">
                 <ul class="nav-list">
-                    <li><a href="index.html">Studio</a></li>
+                    <li><a href="index.html" class="active">Studio</a></li>
                     <li><a href="portofolio.html">Portofolio</a> </li>
                     <li><a href="contacts.html">Contacts</a> </li>
                 </ul>
@@ -37,10 +37,58 @@
     <main>
         <!-- Hero section -->
         <section class="hero-section">
-            <div class="container">
+
+            <div class="position">
                 <h1 class="hero-title">Effective Solutions<br>for Your Business
                 </h1>
-                <button type="button" class="order-service">Order Service</button>
+                <button type="button" class="order-service " data-modal-open>Order Service</button>
+            </div>
+            <div class="modal is-hidden" data-modal>
+                <div class="modal-content">
+                    <form action="" autocomplete="on" novalidate>
+                        <p>Leave your contacts and we will call you back</p>
+                        <label for="" class="form-modal">
+                            <span>Name</span>
+                            <input type="text" name="name" class="input" required>
+                            <svg>
+                                <use href="./svg/icons.svg#icon-person"></use>
+                            </svg>
+                        </label>
+                        <label for="" class="form-modal">
+                            <span>Phone</span>
+                            <input type="text" name="phone" class="input" required>
+                            <svg>
+                                <use href="./svg/icons.svg#icon-phone"></use>
+                            </svg>
+                        </label>
+                        <label for="" class="form-modal">
+                            <span>Email</span>
+                            <input type="text" name="email" class="input" required>
+                            <svg>
+                                <use href="./svg/icons.svg#icon-email"></use>
+                            </svg>
+                        </label>
+
+                        <label for="" class="form-modal">
+                            <span>Comment</span>
+                            <textarea type="text" name="message" class="form-message" placeholder="Text input" cols="3"
+                                rows="3"></textarea>
+                        </label>
+                        <label class="accept">
+                            <input type="checkbox" class="check" name="agree" value="agree" required>
+                            <svg class="check-btn">
+                                <use href="./svg/check.svg#icon-check"></use>
+                            </svg>
+                            <span class="policy-text">I accept the terms and conditions of the <a href=""
+                                    class="privacy">Privacy
+                                    Policy</a></span>
+                        </label>
+
+                        <button type="submit" class="modal-btn">Send</button>
+                    </form>
+                    <div class="button close-btn" data-modal-close>&times;</div>
+                </div>
+
             </div>
         </section>
         <!-- Section strenghts -->
@@ -109,10 +157,10 @@
             <div class="container">
                 <h2 class="what-we-do">What Are We Doing</h2>
                 <ul class="what-we-do-pics">
-                    <li><img src="images/img 1.jpg" alt="a pic of a computer monitor" width="360"></li>
-                    <li><img src="images/img 2.jpg" alt="a pic of a phone with multiple interaces" width="360">
+                    <li><img src="images/first_pic.png" alt="a pic of a computer monitor" width="360"></li>
+                    <li><img src="images/second_pic.png" alt="a pic of a phone with multiple interaces" width="360">
                     </li>
-                    <li><img src="images/img 3.jpg"
+                    <li><img src="images/third_pic.png"
                             alt="a pic of someone holding a phone searching for inspiring places" width="360">
                     </li>
                 </ul>
@@ -124,7 +172,7 @@
                 <h2 class="our-team">Our Team</h2>
                 <ul class="our-team-pics">
                     <li>
-                        <img src="images/Team Card 1.jpg" alt="An image of the product designer" width="264">
+                        <img src="images/first_employee.jpg" alt="An image of the product designer" width="264">
                         <h4>Mark Guerrero</h4>
                         <p>Product Designer</p>
                         <div class="social-media">
@@ -157,7 +205,7 @@
 
                         </div>
                     <li>
-                        <img src="images/Team Card 2.jpg" alt="An image of the frontend developer" width="264">
+                        <img src="images/second_employee.jpg" alt="An image of the frontend developer" width="264">
                         <h4>Tom Ford</h4>
                         <p>Frontend Developer</p>
                         <div class="social-media">
@@ -189,7 +237,7 @@
                             </a>
                         </div>
                     <li>
-                        <img src="images/Team Card 3.jpg" alt="An image of one of the marketing employees"
+                        <img src="images/third_employee.jpg" alt="An image of one of the marketing employees"
                             width="264">
                         <h4>Camila Garcia</h4>
                         <p>Marketing</p>
@@ -223,7 +271,7 @@
                         </div>
                     </li>
                     <li>
-                        <img src="images/Team Card 4.jpg" alt="An image of the ux designer" width="264">
+                        <img src="images/forth_employee.jpg" alt="An image of the ux designer" width="264">
                         <h4>Daniel Wilson</h4>
                         <p>UI Designer</p>
                         <div class="social-media">
@@ -335,7 +383,24 @@
                 </a>
             </div>
         </div>
+        <div class="container">
+            <div class="subscribe-footer">
+
+                <form class="position-mail">
+                    <span class="subscribe-bottom">Subscribe</span>
+                    <label class="footer-email">
+                        <input type="text" name="email" required class="mail-style" placeholder="E-mail">
+                        <button type="submit" class="sub-btn">Subscribe
+                            <svg class="send">
+                                <use href="./svg/send-mail.svg#icon-send-mail"></use>
+                            </svg>
+                        </button>
+                    </label>
+                </form>
+            </div>
+        </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
             <nav class="nav-bar">
                 <ul class="nav-list">
                     <li><a href="index.html">Studio</a></li>
-                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="portofolio.html" class="active">Portofolio</a></li>
                     <li><a href="contacts.html" class="another-contact">Contacts</a></li>
                 </ul>
             </nav>
@@ -36,37 +36,63 @@
         <!-- Filter buttons -->
         <div class="filters">
             <ul class="portofolio-buttons">
-                <li><span>
-                        <button type="button" class="all-button">All</button>
-                    </span>
-                    <span>
-                        <button type="button" class="web-button">Web site</button>
-                    </span>
-                    <span>
-                        <button type="button" class=" app-button">App</button></span>
-                    <span>
-                        <button type="button" class="design-button">Design</button></span>
-                    <span>
-                        <button type="button" class="marketing-button">Marketing</button></span>
+                <li>
+                    <button type="button" class="filter-btn all-button" onclick="filterSelection('all')">All</button>
+                    <button type="button" class="filter-btn web-button"
+                        onclick="filterSelection('web')">Website</button>
+                    <button type="button" class="filter-btn app-button" onclick="filterSelection('app')">App</button>
+                    <button type="button" class="filter-btn design-button"
+                        onclick="filterSelection('design')">Design</button>
+                    <button type="button" class="filter-btn marketing-button"
+                        onclick="filterSelection('marketing')">Marketing</button>
                 </li>
             </ul>
         </div>
+
         <!-- List of images-->
         <section class="list-border">
             <div class="container">
                 <ul class="portofolio-list-one">
-                    <li>
-                        <img src="images/Portofolio 1.jpg" alt="The interface of the banking app">
+                    <li data-category="app">
+                        <div class="img-overlay">
+                            <img src="images/banking_app.jpg" alt="The interface of the banking app">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Banking App Interface Concept</h4>
                         <p>App</p>
+
                     </li>
-                    <li>
-                        <img src="images/Portofolio 2.jpg" alt="An image of cashless payment">
+                    <li data-category="marketing">
+                        <div class="img-overlay">
+                            <img src="images/cashless_payment.jpg" alt="An image of cashless payment">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Cashless Payment</h4>
                         <p>Marketing</p>
                     </li>
-                    <li>
-                        <img src="images/Portofolio 3.jpg" alt="A preview of the meditation app">
+                    <li data-category="app">
+                        <div class="img-overlay">
+                            <img src="images/meditation.jpg" alt="A preview of the meditation app">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Meditation App</h4>
                         <p>App</p>
                     </li>
@@ -74,19 +100,46 @@
             </div>
             <div class="container">
                 <ul class="portofolio-list-two">
-                    <li>
-                        <img src="images/Portofolio 4.jpg" alt="An image of a taxi driver">
+                    <li data-category="marketing">
+                        <div class="img-overlay">
+                            <img src="images/taxi.jpg" alt="An image of a taxi driver">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Taxi Service</h4>
                         <p>Marketing</p>
                     </li>
-                    <li>
-                        <img src="images/Portofolio 5.jpg" alt="A few images with background previews">
+                    <li data-category="design">
+                        <div class="img-overlay">
+                            <img src="images/screen_ill.jpg" alt="A few images with background previews">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Screen Illustrations</h4>
                         <p>Design</p>
                     </li>
-                    <li>
-                        <img src="images/Portofolio 6.jpg"
-                            alt="A pic of a woman being connected to the classes online">
+                    <li data-category="marketing">
+                        <div class="img-overlay">
+                            <img src="images/online_courses.jpg"
+                                alt="A pic of a woman being connected to the classes online">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Online Courses</h4>
                         <p>Marketing</p>
                     </li>
@@ -94,18 +147,45 @@
             </div>
             <div class="container">
                 <ul class="portofolio-list-three">
-                    <li>
-                        <img src="images/Portofolio 7.jpg" alt="Previews of the instragram stories concept ">
+                    <li data-category="design">
+                        <div class="img-overlay">
+                            <img src="images/instagram_stories.jpg" alt="Previews of the instragram stories concept ">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Instagram Stories Concept</h4>
                         <p>Design</p>
                     </li>
-                    <li>
-                        <img src="images/Portofolio 8.jpg" alt="A pic of someone carrying organic food">
+                    <li data-category="web">
+                        <div class="img-overlay">
+                            <img src="images/organic_food.jpg" alt="A pic of someone carrying organic food">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Organic Food</h4>
                         <p>Web Site</p>
                     </li>
-                    <li>
-                        <img src="images/Portofolio 9.jpg" alt="A pic of someone holding a cup of fresh coffee">
+                    <li data-category="web">
+                        <div class="img-overlay">
+                            <img src="images/fresh_coffee.jpg" alt="A pic of someone holding a cup of fresh coffee">
+                            <div class="overlay">
+                                <p class="text-overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App
+                                    · Calorie Tracker
+                                    App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App</p>
+                            </div>
+                        </div>
                         <h4>Fresh Coffee</h4>
                         <p>Web Site</p>
                     </li>
@@ -154,7 +234,24 @@
                 </a>
             </div>
         </div>
+        <div class="container">
+            <div class="subscribe-footer">
+
+                <form class="position-mail">
+                    <span class="subscribe-bottom">Subscribe</span>
+                    <label class="footer-email">
+                        <input type="text" name="email" required class="mail-style" placeholder="E-mail">
+                        <button type="submit" class="sub-btn">Subscribe
+                            <svg class="send">
+                                <use href="./svg/send-mail.svg#icon-send-mail"></use>
+                            </svg>
+                        </button>
+                    </label>
+                </form>
+            </div>
+        </div>
     </footer>
+    <script src="./js/filter.js"></script>
 </body>
 
 </html>
